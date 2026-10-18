@@ -61,4 +61,6 @@ Training: 50 ones and 50 sevens. Both selected configurations reached mean valid
 
 ## Submission
 
+Clustering of the 900 test sevens selected k=2 by mean silhouette (0.12174), with cluster sizes 406 and 494. The required initial k=100 partition had silhouette 0.06549. The low scores indicate overlapping handwriting styles rather than sharply separated populations.
+
 The local submission bundle contains the Python source and one PDF report, without the dataset or fitted models. Rename its ZIP to `StudentID_FullName.zip` if personal details were not supplied. Review the analysis and follow the course's rules on assistance and attribution before submission.

@@ -15,7 +15,7 @@ from .explore import save_figure
 
 
 def montage(images: np.ndarray, titles: list[str], path: Path, heading: str) -> None:
-    columns = min(10, len(images))
+    columns = min(6 if len(images) <= 12 else 10, len(images))
     rows = int(np.ceil(len(images) / columns))
     fig, axes = plt.subplots(rows, columns, figsize=(columns * 1.6, rows * 1.7), squeeze=False)
     for ax in axes.flat:
