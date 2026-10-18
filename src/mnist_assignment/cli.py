@@ -18,6 +18,8 @@ def main() -> None:
         print(explore(images, labels, args.output / "exploration"))
     elif args.stage == "train":
         from .train import train
+        if (args.output / "evaluation" / "test_metrics.json").exists():
+            parser.error("This experiment has seen the test set; preserve its frozen selection")
         images, labels = load_split(args.data, "train")
         train(images, labels, args.output / "training")
     elif args.stage == "evaluate":
